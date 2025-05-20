@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  text-align: center;
+  padding: 40px;
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+}
+
+.clock-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.clock {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  border: 10px solid white;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: rotate(90deg);
+  transition: all 0.05s ease-in-out;
+}
+
+.hour {
+  width: 6px;
+  height: 70px;
+  background: #ffd700;
+  z-index: 3;
+  border-radius: 3px;
+}
+
+.minute {
+  width: 4px;
+  height: 100px;
+  background: #00e5ff;
+  z-index: 2;
+  border-radius: 2px;
+}
+
+.second {
+  width: 2px;
+  height: 120px;
+  background: #ff4c4c;
+  z-index: 1;
+  border-radius: 1px;
+}
+
+.center-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  box-shadow: 0 0 10px white;
+}
+
+.digital-time {
+  text-align: left;
+}
+
+.digital-time h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.digital-time p {
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 30px;
+  border-radius: 12px;
+  width: fit-content;
+  user-select: none;
+}
+
+.timezone-links {
+  margin-top: 25px;
+  font-size: 1.15rem;
+}
+
+.timezone-links a {
+  margin: 0 14px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.timezone-links a:hover {
+  color: #ffcc00;
+}
